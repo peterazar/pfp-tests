@@ -15,30 +15,25 @@
         // 3. This function creates an <iframe> (and YouTube player)
         //    after the API code downloads.
         var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                width: '850',
-                height: '478',
-                videoId: 'QQ32MyZmXeQ',
-                hl: 'he',
-                //autoplay:0,
-                // events: {
-                //     'onReady': onPlayerReady
-                // },
-                embedConfig: '{
-                    "primaryThemeColor":"#0000FF",
-                    "adsConfig": {
-                        "adTagParameters": {
-                            "iu": "/91286236/pfp_di_checking"
-                            //cust_params: 'player%3Dpfp',
-                            //pmnd: 5000,
-                            //pmxd: 40000,
-                            //pmad: 2
-                        }
-                    }
-                }'
-            });
-        }
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '390',
+    width: '640',
+    videoId: 'XDgC4FMftpg',
+    //events: {
+    //  'onReady': onPlayerReady,
+    //  'onStateChange': onPlayerStateChange
+    //},
+    embedConfig: '{"primaryThemeColor": "#FF0000",
+                   "adsConfig": {
+                     "adTagParameters": {
+                        "iu": "/91286236/pfp_di_checking"
+                     }
+                   },
+                   "autonavRelatedVideos": true
+                 }'
+  });
+}
 
         // 4. The API will call this function when the video player is ready.
         function onPlayerReady(event) {
